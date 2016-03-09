@@ -1,0 +1,29 @@
+{
+  "name": "node-react-bp",
+  "version": "1.0.0",
+  "description": "A very simple NodeJS + React + Babel boilerplate",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Vuong <david.vuong256@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "run-sequence": "^1.1.5",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0",
+    "redux": "^3.3.1"
+  }
+}
