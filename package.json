@@ -6,6 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/davidvuong/node-react-bp.git"
+  },
+
   "author": "David Vuong <david.vuong256@gmail.com>",
   "license": "MIT",
   "devDependencies": {
