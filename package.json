@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/davidvuong/node-react-bp.git"
   },
-
   "author": "David Vuong <david.vuong256@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -20,11 +19,14 @@
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
+    "gulp-shell": "^0.5.2",
     "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "lodash": "^4.6.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
