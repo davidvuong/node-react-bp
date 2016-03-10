@@ -1,13 +1,18 @@
-#!/usr/bin/env node
-'use strict';
-import React, { Component } from 'react';
-import HelloWorld from './hello-world';
+import React from 'react';
+import { Link, IndexLink } from 'react-router';
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return <div>
             <h1>Node + ReactJS Boilerplate</h1>
-            <HelloWorld />
+
+            <ul>
+                <li><IndexLink to="/">app</IndexLink></li>
+                <li><Link to="/example-1">example-1</Link></li>
+                <li><Link to="/example-2">example-2</Link></li>
+            </ul>
+
+            {this.props.children}
         </div>;
     }
 }

@@ -1,9 +1,9 @@
-#!/usr/bin/env node
-import { Render} from 'react-dom';
+import React from 'react';
+import { render } from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 
-ReactDOM.render(
+render(
     <Router routes={routes} history={browserHistory} />,
     document.getElementById('app')
 );

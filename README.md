@@ -2,7 +2,7 @@
 
 **Welcome to node-react-bp!**
 
-This is an incredibly simple NodeJS + ReactJS + Babel + Gulp + Browsify boilerplate.
+This is an incredibly simple NodeJS + ReactJS + Babel + Webpack boilerplate.
 
 ## Getting Started
 
