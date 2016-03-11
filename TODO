@@ -1,7 +1,3 @@
 - Integrate Redux
-- Configure backend to also support routes with /api (express controllers)
 - Integrating JEST or Chai Or Mocha for unit testing
 - Integrate Bootstrap
-- Integrate a Promise library
-- Integrate HTTP library
-- Superagent + Bluebird

@@ -8,6 +8,14 @@ import routes from './routes';
 const app = express();
 app.use(express.static('src/public'));
 
+/* API router handles all requests made to `/api`. */
+const apiRouter = express.Router();
+apiRouter.route('/base-1')
+    .get((req, res) => {
+        res.send('hello from /api/base-1!');
+    });
+
+app.use('/api', apiRouter);
 app.get('*', (req, res) => {
     match({ routes: routes, location: req.url }, (err, redirect, props) => {
         if (err) {
@@ -19,6 +27,10 @@ app.get('*', (req, res) => {
 
         // Matched a route in `routes`!
         } else if (props) {
+            // TODO: Improve on this! ...later
+            //
+            // There has got to be a better way to do this that doesn't involve
+            // reading from disk and replacing a special string in the index file.
             const html = fs.readFileSync('src/views/index.html', 'utf8');
             res.send(html.replace(
                 '{app-data}', renderToString(<RouterContext {...props}/>)
