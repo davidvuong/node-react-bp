@@ -1,10 +1,7 @@
 - Integrate Redux
-- Configure server-side rendering + support non-hash URLs on frontend
 - Configure backend to also support routes with /api (express controllers)
-- Integrate SASS
-- Integrating JEST for unit testing on React
-- Integrate Chai and Mocha for unit testing on Node
+- Integrating JEST or Chai Or Mocha for unit testing
 - Integrate Bootstrap
-- Integrate Masonry
 - Integrate a Promise library
 - Integrate HTTP library
+- Superagent + Bluebird

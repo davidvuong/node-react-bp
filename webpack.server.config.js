@@ -14,7 +14,7 @@ fs.readdirSync('node_modules')
 module.exports = {
     entry: './src/server.js',
     target: 'node',
-    output: { path: __dirname, filename: 'bundle.js' },
+    output: { path: __dirname + '/build', filename: 'server.js' },
     externals: nodeModules,
     module: {
         loaders: [
@@ -24,5 +24,12 @@ module.exports = {
                 loader: 'babel-loader?presets[]=es2015&presets[]=react'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                BROWSER: JSON.stringify(false)
+            }
+        })
+    ]
 };

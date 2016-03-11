@@ -1,8 +1,16 @@
 import React from 'react';
 
+if (process.env.BROWSER) {
+    require('../scss/components/example-component-2.scss');
+}
+
 class ExampleComponent2 extends React.Component {
     render() {
-        return <p>Hello, world (e.g. 2)!</p>;
+        return (
+            <div className='example-component-2'>
+                <p>Hello, world (e.g. 2)!</p>
+            </div>
+        );
     }
 }
 
