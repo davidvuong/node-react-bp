@@ -6,7 +6,7 @@ import express from 'express';
 import routes from './routes';
 
 const app = express();
-app.use(express.static('src/public'));
+app.use(express.static('public'));
 
 /* API router handles all requests made to `/api`. */
 const apiRouter = express.Router();
@@ -31,7 +31,7 @@ app.get('*', (req, res) => {
             //
             // There has got to be a better way to do this that doesn't involve
             // reading from disk and replacing a special string in the index file.
-            const html = fs.readFileSync('src/views/index.html', 'utf8');
+            const html = fs.readFileSync('src/index.html', 'utf8');
             res.send(html.replace(
                 '{app-data}', renderToString(<RouterContext {...props}/>)
             ));
