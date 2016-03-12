@@ -28,7 +28,7 @@ This is an incredibly simple NodeJS + ReactJS + Babel + Webpack boilerplate.
 
 ## Resources
 
-There are some really great resources online. These are just a few of the resources I used to help create this project:
+There are some really great resources online. There's a dump of most (of not all) of the resources I found useful when creating this boilerplate project:
 
 * https://github.com/airbnb/javascript/tree/master/react
 * https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree
@@ -43,3 +43,5 @@ There are some really great resources online. These are just a few of the resour
 * http://webpack.github.io/docs/using-loaders.html
 * https://www.twilio.com/blog/2015/08/setting-up-react-for-es6-with-webpack-and-babel-2.html
 * http://survivejs.com/webpack/getting-started/
+* http://redux.js.org/docs/basics/UsageWithReact.html
+* https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.cz4lfz6h0

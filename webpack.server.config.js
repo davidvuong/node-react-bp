@@ -22,8 +22,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader?presets[]=es2015&presets[]=react'
+                loader: 'babel-loader',
+                exclude: [/node_modules/, /public/],
+                query: {
+                    presets: ['es2015', 'react'],
+                    plugins: ['transform-object-rest-spread']
+                }
             }
         ]
     },
