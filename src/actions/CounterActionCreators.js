@@ -1,10 +1,11 @@
+'use strict';
 import { INCREMENT, DECREMENT } from '../reducers/counter';
 
 function increment() {
-    return { type: INCREMENT };
+  return { type: INCREMENT };
 }
 function decrement() {
-    return { type: DECREMENT };
+  return { type: DECREMENT };
 }
 
 export default { increment, decrement };
