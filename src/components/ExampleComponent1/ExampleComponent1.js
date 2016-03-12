@@ -2,7 +2,7 @@ import React from 'react';
 import request from 'superagent-bluebird-promise';
 
 if (process.env.BROWSER) {
-    require('../scss/components/ExampleComponent1.scss');
+    require('./ExampleComponent1.scss');
 }
 
 class ExampleComponent1 extends React.Component {
