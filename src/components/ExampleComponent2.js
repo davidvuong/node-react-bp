@@ -1,7 +1,7 @@
 import React from 'react';
 
 if (process.env.BROWSER) {
-    require('../scss/components/example-component-2.scss');
+    require('../scss/components/ExampleComponent2.scss');
 }
 
 class ExampleComponent2 extends React.Component {
