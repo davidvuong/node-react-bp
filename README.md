@@ -2,7 +2,7 @@
 
 **Welcome to node-react-bp!**
 
-This is an incredibly simple boilerplate repository for NodeJS and ReactJS projects. It uses [SCSS](http://sass-lang.com/) as the CSS pre-processor, [webpack](https://webpack.github.io/) as the module bundler, [Babel](https://babeljs.io/) as the ES6 transpiler, and [Express](http://expressjs.com/) as the web application framework. Take a look at the [package.json]() file for more details.
+This is an incredibly simple boilerplate repository for NodeJS and ReactJS projects. It uses [SCSS](http://sass-lang.com/) as the CSS pre-processor, [webpack](https://webpack.github.io/) as the module bundler, [Babel](https://babeljs.io/) as the ES6 transpiler, and [Express](http://expressjs.com/) as the web application framework. Take a look at the [package.json](package.json) file for more details.
 
 ## Getting Started
 
@@ -54,7 +54,7 @@ Whenever a change is made to any SCSS, ES6 or JSX files, your code will be re-co
 
 ## Resources
 
-There are some really great resources online. There's a dump of most (of not all) of the resources I found useful when creating this boilerplate project:
+There are some really great resources online. There's a dump of most (if not all) of the resources I found useful when creating this boilerplate project:
 
 * https://github.com/airbnb/javascript/tree/master/react
 * https://egghead.io/lessons/javascript-redux-the-single-immutable-state-tree
