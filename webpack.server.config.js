@@ -11,23 +11,27 @@ fs.readdirSync('node_modules')
     nodeModules[mod] = 'commonjs ' + mod;
   });
 
+var babelLoaderSettings = {
+  presets: ['es2015', 'react'],
+  plugins: ['transform-object-rest-spread']
+};
+
 module.exports = {
   entry: {
     server: './src/server.js'
   },
   target: 'node',
   output: { path: __dirname + '/build', filename: 'server.js' },
+  eslint: {
+    configFile: './.eslintrc'
+  },
   externals: nodeModules,
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: [/node_modules/, /public/],
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: ['transform-object-rest-spread']
-        }
+        loaders: ['babel-loader?' + JSON.stringify(babelLoaderSettings), 'eslint-loader'],
+        exclude: [/node_modules/, /public/]
       }
     ]
   },

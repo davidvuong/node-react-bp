@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -12,7 +11,7 @@ if (process.env.BROWSER) {
 class Home extends React.Component {
   render() {
     return (
-      <div className='home-page'>
+      <div className="home-page">
         <p>You are at the home page!</p>
 
         <p>Increment/decrement counter example</p>
@@ -22,11 +21,11 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   return { count: state.counter.count };
-};
+}
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   return {
     onCounterIncrement: () => {
       dispatch(CountActionCreators.increment());
@@ -35,7 +34,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(CountActionCreators.decrement());
     }
   };
-};
+}
 
 export default connect(
   mapStateToProps,

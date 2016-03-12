@@ -1,4 +1,3 @@
-'use strict';
 import { INCREMENT, DECREMENT } from '../reducers/counter';
 
 function increment() {

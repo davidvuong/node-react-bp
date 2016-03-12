@@ -1,10 +1,9 @@
-'use strict';
 import fs from 'fs';
 
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import express from 'express';
 
 import routes from './routes';
@@ -17,12 +16,12 @@ app.use(express.static('public'));
 const apiRouter = express.Router();
 apiRouter.route('/random-color')
   .get((req, res) => {
-    res.send('#' + Math.random().toString(16).slice(2, 8).toUpperCase());
+    res.send(`#${Math.random().toString(16).slice(2, 8).toUpperCase()}`);
   });
 
 app.use('/api', apiRouter);
 app.get('*', (req, res) => {
-  match({ routes: routes, location: req.url }, (err, redirect, props) => {
+  match({ routes, location: req.url }, (err, redirect, props) => {
     if (err) {
       res.status(500).send(err.message);
 
@@ -47,10 +46,10 @@ app.get('*', (req, res) => {
     } else {
       res.status(404).send('Not Found');
     }
-  })
+  });
 });
 
-var PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}... Press Ctrl+C to stop.`);
 });

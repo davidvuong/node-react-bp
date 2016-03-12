@@ -1,7 +1,5 @@
-'use strict';
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, IndexLink } from 'react-router';
 
 import Counter from '../../components/Counter/Counter';
 import CounterActionCreators from '../../actions/CounterActionCreators';
@@ -16,7 +14,7 @@ if (process.env.BROWSER) {
 class Detail extends React.Component {
   render() {
     return (
-      <div className='detail-page'>
+      <div className="detail-page">
         <p>You are at the detail page!</p>
         <p>There are 2 presentational components in this container</p>
 
@@ -38,15 +36,15 @@ class Detail extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   return {
     count: state.counter.count,
     color: state.coloredSquare.color,
     status: state.coloredSquare.status
   };
-};
+}
 
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   return {
     onCounterIncrement: () => {
       dispatch(CounterActionCreators.increment());
@@ -58,7 +56,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(ColoredSquareActionCreators.fetchColor());
     }
   };
-};
+}
 
 export default connect(
   mapStateToProps,

@@ -1,4 +1,3 @@
-'use strict';
 import React, { PropTypes } from 'react';
 
 const propTypes = {
@@ -10,7 +9,7 @@ const propTypes = {
 class Counter extends React.Component {
   render() {
     return (
-      <div className='counter'>
+      <div className="counter">
         {this.props.count}
         <br />
         <button onClick={this.props.onCounterIncrement}>+</button>
