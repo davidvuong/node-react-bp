@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Button } from 'react-bootstrap';
 
 const propTypes = {
   onRetrieveColor: PropTypes.func.isRequired,
@@ -12,7 +13,7 @@ class ColoredSquare extends React.Component {
     return (
       <div className="colored-square" style={styles}>
         {this.props.status}
-        <button onClick={this.props.onRetrieveColor}>get color</button>
+        <Button bsStyle="primary" onClick={this.props.onRetrieveColor}>get color</Button>
       </div>
     );
   }
