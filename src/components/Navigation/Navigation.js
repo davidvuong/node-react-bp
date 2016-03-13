@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, NavItem, NavDropdown, Nav, MenuItem } from 'react-bootstrap';
 
 class Navigation extends Component {
@@ -8,14 +10,18 @@ class Navigation extends Component {
         <Navbar>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Node+React BP</a>
+              <Link to="/">Node+React BP</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1} href="/">Home</NavItem>
-              <NavItem eventKey={2} href="/detail">Detail</NavItem>
+              <LinkContainer to={{ pathname: '/' }}>
+                <NavItem eventKey={1}>Home</NavItem>
+              </LinkContainer>
+              <LinkContainer to={{ pathname: '/detail' }}>
+                <NavItem eventKey={2}>Detail</NavItem>
+              </LinkContainer>
               <NavDropdown eventKey={3} title="DropDown" id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}>Action</MenuItem>
                 <MenuItem eventKey={3.2}>Another action</MenuItem>
