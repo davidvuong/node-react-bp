@@ -1,5 +1,4 @@
-export const INCREMENT = 'counter/INCREMENT';
-export const DECREMENT = 'counter/DECREMENT';
+import { INCREMENT, DECREMENT } from '../constants/ActionTypes';
 
 const initialState = {
   count: 0

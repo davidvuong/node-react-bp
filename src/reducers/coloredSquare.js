@@ -1,5 +1,4 @@
-export const FETCH_COLOR = 'coloredSquare/FETCH_COLOR';
-export const SET_COLOR = 'coloredSquare/SET_COLOR';
+import { FETCH_COLOR, SET_COLOR } from '../constants/ActionTypes';
 
 const initialState = {
   status: 'idle',

@@ -10,20 +10,20 @@ This is an incredibly simple boilerplate repository for NodeJS and ReactJS proje
 
 1. Clone the git repository:
 
-  ```
+  ```bash
   git clone git@github.com:davidvuong/node-react-bp.git
   ```
 
 1. Download the latest version of NodeJS (as of now, v5.7.1):
 
-  ```
+  ```bash
   nvm install v5.7.1
   nvm use v5.7.1
   ```
 
 1. Install all the project dependencies:
 
-  ```
+  ```bash
   cd node-react-bp/
   npm install
   ```
@@ -38,25 +38,37 @@ I prefer to split my screen so I can quickly see everything in a single view but
 
 1. The first command compiles your client side JSX+ES6 and SCSS files into a bundle (bundle.js, style.css).
 
-  ```
+  ```bash
   npm run watch:client
   ```
 
 1. The second command compiles all your server related JSX+ES6 files into a server.js bundle.
 
-  ```
+  ```bash
   npm run watch:server
   ```
 
 1. Finally, the last command starts the NodeJS ExpressJS server using nodemon.
 
-  ```
+  ```bash
   npm start
   ```
 
 Whenever a change is made to any SCSS, ES6 or JSX files, your code will be re-compiled and [nodemon](https://github.com/remy/nodemon) will restart the NodeJS Express server. I've also setup ESLint to raise any warnings/errors if your code doesn't comply to the rules defined in `.eslintrc`.
 
-## Resources
+## Running Tests
+
+Tests are written utilising [Mocha](http://mochajs.org/), [React TestUtils](https://facebook.github.io/react/docs/test-utils.html), [mjackson/expect](https://github.com/mjackson/expect), [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store), and [nock](https://github.com/pgte/nock). There are 2 npm commands you can use to run tests:
+
+```bash
+# Runs your tests once.
+npm test
+
+# Runs your tests on every file change.
+npm test:watch
+```
+
+## Online Resources
 
 There are some really great resources online. There's a dump of most (if not all) of the resources I found useful when creating this boilerplate project:
 
@@ -75,3 +87,4 @@ There are some really great resources online. There's a dump of most (if not all
 * http://survivejs.com/webpack/getting-started/
 * http://redux.js.org/docs/basics/UsageWithReact.html
 * https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.cz4lfz6h0
+* https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md

@@ -8,6 +8,7 @@ import express from 'express';
 
 import routes from './routes';
 import configureStore from './store/configureStore';
+import config from './config';
 
 const app = express();
 app.use(express.static('public'));
@@ -49,7 +50,7 @@ app.get('*', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || config.PORT;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}... Press Ctrl+C to stop.`);
 });

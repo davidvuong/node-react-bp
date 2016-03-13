@@ -1,18 +1,34 @@
 import fetch from 'isomorphic-fetch';
-import { FETCH_COLOR, SET_COLOR } from '../reducers/coloredSquare';
+import config from '../config';
+import { FETCH_COLOR, SET_COLOR } from '../constants/ActionTypes';
+
+function fetchColorInit() {
+  return { type: FETCH_COLOR, status: 'fetching' };
+}
+
+function fetchColorSuccess(color) {
+  return { type: FETCH_COLOR, status: 'success', color };
+}
+
+function fetchColorError(error) {
+  return { type: FETCH_COLOR, status: 'failed', error };
+}
+
+function setColor(color) {
+  return { type: SET_COLOR, color };
+}
 
 function fetchColor() {
   return (dispatch) => {
-    dispatch({ type: FETCH_COLOR, status: 'fetching' });
-    fetch('/api/random-color/').then(res => { return res.text(); }).then((data) => {
-      // `setTimeout` to see loading message.
-      setTimeout(() => {
-        dispatch({ type: FETCH_COLOR, status: 'success', color: data });
-        dispatch({ type: SET_COLOR, color: data });
-      }, 1500);
+    dispatch(fetchColorInit());
+    return fetch(`${config.ENDPOINT}/api/random-color/`).then(
+        res => { return res.text(); }
+    ).then((data) => {
+      dispatch(fetchColorSuccess(data));
+      dispatch(setColor(data));
     }).catch((err) => {
-      dispatch({ type: FETCH_COLOR, status: 'failed', error: err });
+      dispatch(fetchColorError(err));
     });
   };
 }
-export default { fetchColor };
+export default { fetchColor, setColor };

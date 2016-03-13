@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../reducers/counter';
+import { INCREMENT, DECREMENT } from '../constants/ActionTypes';
 
 function increment() {
   return { type: INCREMENT };
