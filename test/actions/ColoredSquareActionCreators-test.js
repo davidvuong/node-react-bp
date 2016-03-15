@@ -33,9 +33,8 @@ describe('ColoredSquareActionCreators', () => {
       }
     });
     store.dispatch(actions.fetchColor()).then(() => {
-      const actions = store.getActions();
-      expect(actions).toEqual(expectedActions);
-      done()
+      expect(store.getActions()).toEqual(expectedActions);
+      done();
     });
-  })
+  });
 });

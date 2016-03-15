@@ -15,5 +15,5 @@ describe('CounterActionCreators', () => {
       type: types.DECREMENT
     };
     expect(actions.decrement()).toEqual(expectedAction);
-  })
+  });
 });
