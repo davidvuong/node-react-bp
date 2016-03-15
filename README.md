@@ -65,7 +65,7 @@ Tests are written utilising [Mocha](http://mochajs.org/), [React TestUtils](http
 npm test
 
 # Runs your tests on every file change.
-npm test:watch
+npm run test:watch
 ```
 
 ## Online Resources
