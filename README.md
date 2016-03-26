@@ -55,6 +55,12 @@ I prefer to split my screen so I can quickly see everything in a single view but
   npm start
   ```
 
+1. Alternatively, if you want to just build it once and then run, you can run `build`.
+
+  ```bash
+  npm run build && npm start
+  ```
+
 Whenever a change is made to any SCSS, ES6 or JSX files, your code will be re-compiled and [nodemon](https://github.com/remy/nodemon) will restart the NodeJS Express server. I've also setup ESLint to raise any warnings/errors if your code doesn't comply to the rules defined in `.eslintrc`.
 
 ## Running Tests
