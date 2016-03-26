@@ -1,6 +1,7 @@
 # NodeJS + ReactJS Boilerplate
 
-[![Code style: airbnb](https://img.shields.io/badge/code%20style-airbnb-blue.svg?style=flat-square)](https://github.com/airbnb/javascript)
+[![Code style: airbnb](https://img.shields.io/badge/code%20style-airbnb-blue.svg)](https://github.com/airbnb/javascript)
+[![Build Status](https://travis-ci.org/davidvuong/node-react-bp.svg?branch=master)](https://travis-ci.org/davidvuong/node-react-bp)
 
 **Welcome to node-react-bp!**
 
