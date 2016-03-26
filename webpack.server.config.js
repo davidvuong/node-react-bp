@@ -1,17 +1,17 @@
-var webpack = require('webpack');
-var fs = require('fs');
+const webpack = require('webpack');
+const fs = require('fs');
 
 // Too many problems with bundling `node_modules/`.
-var nodeModules = {};
+const nodeModules = {};
 fs.readdirSync('node_modules')
-  .filter(function (x) {
+  .filter(x => {
     return ['.bin'].indexOf(x) === -1;
   })
-  .forEach(function (mod) {
-    nodeModules[mod] = 'commonjs ' + mod;
+  .forEach(mod => {
+    nodeModules[mod] = `commonjs${mod}`;
   });
 
-var babelLoaderSettings = {
+const babelLoaderSettings = {
   presets: ['es2015', 'react'],
   plugins: ['transform-object-rest-spread']
 };
@@ -21,7 +21,7 @@ module.exports = {
     server: './src/server.js'
   },
   target: 'node',
-  output: { path: __dirname + '/build', filename: 'server.js' },
+  output: { path: `${__dirname}/build`, filename: 'server.js' },
   eslint: {
     configFile: './.eslintrc'
   },
@@ -30,7 +30,9 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader?' + JSON.stringify(babelLoaderSettings), 'eslint-loader'],
+        loaders: [
+          `babel-loader?${JSON.stringify(babelLoaderSettings)}`, 'eslint-loader'
+        ],
         exclude: [/node_modules/, /public/]
       }
     ]
