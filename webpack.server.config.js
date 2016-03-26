@@ -8,7 +8,7 @@ fs.readdirSync('node_modules')
     return ['.bin'].indexOf(x) === -1;
   })
   .forEach(mod => {
-    nodeModules[mod] = `commonjs${mod}`;
+    nodeModules[mod] = `commonjs ${mod}`;
   });
 
 const babelLoaderSettings = {
