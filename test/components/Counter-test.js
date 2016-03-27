@@ -1,20 +1,19 @@
 import expect from 'expect';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
 import Counter from '../../src/components/Counter/Counter';
 
 function setup() {
-  let props = {
+  const props = {
     count: 0,
     onCounterIncrement: expect.createSpy(),
     onCounterDecrement: expect.createSpy()
   };
 
-  let renderer = TestUtils.createRenderer();
+  const renderer = TestUtils.createRenderer();
   renderer.render(<Counter {...props} />);
-  let output = renderer.getRenderOutput();
+  const output = renderer.getRenderOutput();
   return { props, output, renderer };
 }
 
