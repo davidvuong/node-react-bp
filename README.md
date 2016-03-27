@@ -15,11 +15,11 @@ This is an incredibly simple boilerplate repository for NodeJS and ReactJS proje
   git clone git@github.com:davidvuong/node-react-bp.git
   ```
 
-1. Download the latest version of NodeJS (as of now, v5.7.1):
+1. Download the latest version of NodeJS:
 
   ```bash
-  nvm install v5.7.1
-  nvm use v5.7.1
+  nvm install v5.9.1
+  nvm use v5.9.1
   ```
 
 1. Install all the project dependencies:
