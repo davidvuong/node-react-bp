@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
@@ -9,6 +7,7 @@ import express from 'express';
 import routes from './routes';
 import configureStore from './store/configureStore';
 import config from './config';
+import utils from './common/utils';
 
 const app = express();
 app.use(express.static('public'));
@@ -26,19 +25,14 @@ app.get('*', (req, res) => {
     if (err) {
       res.status(500).send(err.message);
 
-      // See: https://github.com/reactjs/react-router/blob/master/docs/API.md#redirect
+    // See: https://github.com/reactjs/react-router/blob/master/docs/API.md#redirect
     } else if (redirect) {
       res.redirect(redirect.pathname + redirect.search);
 
-      // Matched a route in `routes`!
+    // Matched a route in `routes`!
     } else if (props) {
-      // TODO: Improve on this! ...later
-      //
-      // There has got to be a better way to do this that doesn't involve
-      // reading from disk and replacing a special string in the index file.
-      const html = fs.readFileSync('src/index.html', 'utf8');
-      res.send(html.replace(
-        '{app-data}', renderToString(
+      res.send(utils.getIndex(
+        renderToString(
           <Provider store={ configureStore() }>
             <RouterContext {...props} />
           </Provider>
