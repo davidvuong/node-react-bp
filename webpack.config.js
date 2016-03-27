@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
-          'style-loader', 'css-loader!autoprefixer-loader!sass-loader'
+          'style-loader', 'css-loader!postcss-loader!sass-loader'
         )
       }
     ]

@@ -19,7 +19,6 @@
   "author": "David Vuong <david.vuong256@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer-loader": "3.2.0",
     "babel": "6.5.2",
     "babel-core": "6.7.0",
     "babel-eslint": "6.0.0-beta.5",
@@ -41,6 +40,8 @@
     "nock": "7.2.2",
     "node-sass": "3.4.2",
     "nodemon": "1.9.1",
+    "postcss": "^5.0.19",
+    "postcss-loader": "^0.8.2",
     "react-addons-test-utils": "0.14.7",
     "redux-devtools": "3.1.1",
     "redux-mock-store": "1.0.2",
